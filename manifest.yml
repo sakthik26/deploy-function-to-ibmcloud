@@ -1,0 +1,12 @@
+packages:
+    deploy_package:
+      version: 1.0
+      license: Apache-2.0
+      actions:
+        deploy_action:
+          function: main.py
+          inputs:
+            name: ${PUBLIC_GH_TOKEN}
+            place: ${PUBLIC_GH_TOKEN}
+            name: ${GHE_TOKEN}
+            place: ${GHE_TOKEN}
