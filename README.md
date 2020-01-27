@@ -7,5 +7,5 @@ Using: <https://github.com/apache/openwhisk-wskdeploy/blob/master/docs/wskdeploy
 The gist of it is:
 
 ```bash
-ibmcloud fn deploy --auth bluemixkey --namespace foo --manifest somefile.yml
+ibmcloud fn deploy --manifest somefile.yml
 ```
