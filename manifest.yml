@@ -5,8 +5,7 @@ packages:
       actions:
         deploy_action:
           function: main.py
+          runtime: 'python:3.7'
           inputs:
-            name: ${PUBLIC_GH_TOKEN}
-            place: ${PUBLIC_GH_TOKEN}
-            name: ${GHE_TOKEN}
-            place: ${GHE_TOKEN}
+            PUBLIC_GH_TOKEN: $PUBLIC_GH_TOKEN
+            GHE_TOKEN: $GHE_TOKEN

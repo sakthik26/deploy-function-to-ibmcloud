@@ -1,0 +1,13 @@
+---
+language: python
+install:
+    - pip install requests flake8
+script:
+    - flake8 --ignore=E501
+before_deploy:
+    - curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
+deploy:
+    provider: script
+    script: |
+        ibmcloud login --apikey ${IBM_CLOUD_API_KEY} > /dev/null 2>&1
+        ibmcloud fn deploy --manifest manifest.yml --auth ${IBM_CLOUD_API_KEY} --namespace {IBM_CLOUD_NAMESPACE}
