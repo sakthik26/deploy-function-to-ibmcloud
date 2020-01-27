@@ -7,8 +7,9 @@
 # @return The output of this action, which must be a JSON object.
 #
 #
-import sys
+
 
 def main(params):
+
     print(params)
-    return { 'message': 'Hello world' }
+    return {'message': 'Hello world'}
