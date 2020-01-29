@@ -1,11 +1,3 @@
 # Deploy OpenWhisk Functions to IBM Cloud
 
-Trying to deploy an openwhisk action to ibm cloud, that reads environment variables
-
-Using: <https://github.com/apache/openwhisk-wskdeploy/blob/master/docs/wskdeploy_action_env_var_parms.md#actions> as a basis
-
-The gist of it is:
-
-```bash
-ibmcloud fn deploy --manifest somefile.yml
-```
+Read about this project on [my blog](http://www.stevemar.net/ci-cd-with-functions/).
