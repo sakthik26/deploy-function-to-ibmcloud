@@ -1,0 +1,23 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+   - name: ibm
+     commands:
+     - curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
+   - name: cloud
+     image: node
+     commands:
+     - ibmcloud plugin install cloud-functions
+     - ibmcloud plugin list
+# pipeline:
+#   build:
+#     image: node
+#     commands:
+#       - npm install
+#       - npm test
+#   publish:
+#     image: plugins/docker
+#     repo: sakthik26/node-demo
+#     secrets: [ docker_username, docker_password ]
