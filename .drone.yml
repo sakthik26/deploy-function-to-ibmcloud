@@ -5,6 +5,15 @@ name: default
 steps:
 - name: ibm
   image: node
+  environment:
+    IBM_CLOUD_API_KEY:
+      from_secret: IBM_CLOUD_API_KEY
+    IBM_CLOUD_REGION:
+      from_secret: IBM_CLOUD_REGION
+    IBM_CLOUD_ORG:
+      from_secret: IBM_CLOUD_ORG
+    IBM_CLOUD_SPACE:
+      from_secret: IBM_CLOUD_SPACE
   commands:
   - curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
   - ibmcloud plugin install cloud-functions
