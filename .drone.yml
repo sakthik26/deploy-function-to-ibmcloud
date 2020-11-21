@@ -7,11 +7,9 @@ steps:
   image: node
   commands:
   - curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
-- name: cloud
-  image: node
-  commands:
   - ibmcloud plugin install cloud-functions
   - ibmcloud plugin list
+  
 # pipeline:
 #   build:
 #     image: node
