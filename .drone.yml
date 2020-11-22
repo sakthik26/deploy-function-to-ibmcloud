@@ -24,7 +24,7 @@ steps:
   # - ibmcloud fn list
   - wget https://github.com/apache/openwhisk-cli/releases/download/latest/OpenWhisk_CLI-latest-linux-386.tgz
   - tar -xvf OpenWhisk_CLI-latest-linux-386.tgz
-  - sudo mv wsk /usr/local/bin/wsk
+  - mv wsk /usr/local/bin/wsk
   - wsk --help
   
 # pipeline:
