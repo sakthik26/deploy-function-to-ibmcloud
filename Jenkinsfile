@@ -18,7 +18,7 @@ pipeline {
             steps {
                 // 
                 echo 'deploy'
-                sh "curl -fsSL https://clis.cloud.ibm.com/install/linux"
+                sh "curl -fsSL https://clis.cloud.ibm.com/install/linux | /bin/sh"
                 sh "ibmcloud plugin install cloud-functions"
                 sh "ibmcloud plugin list"
                 sh "ibmcloud login --apikey ${IBM_CLOUD_API_KEY} -r ${IBM_CLOUD_REGION}"
