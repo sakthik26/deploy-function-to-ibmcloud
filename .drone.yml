@@ -15,17 +15,17 @@ steps:
     IBM_CLOUD_SPACE:
       from_secret: IBM_CLOUD_SPACE
   commands:
-  # - curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
-  # - ibmcloud plugin install cloud-functions
-  # - ibmcloud plugin list
-  # - ibmcloud login --apikey $IBM_CLOUD_API_KEY -r $IBM_CLOUD_REGION
-  # - ibmcloud target -o $IBM_CLOUD_ORG -s $IBM_CLOUD_SPACE
-  # - ibmcloud fn deploy --manifest manifest.yml
-  # - ibmcloud fn list
-  - wget https://github.com/apache/openwhisk-cli/releases/download/latest/OpenWhisk_CLI-latest-linux-386.tgz
-  - tar -xvf OpenWhisk_CLI-latest-linux-386.tgz
-  - mv wsk /usr/local/bin/wsk
-  - wsk --help
+    - curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
+    - ibmcloud plugin install cloud-functions
+    - ibmcloud plugin list
+    - ibmcloud login --apikey $IBM_CLOUD_API_KEY -r $IBM_CLOUD_REGION
+    - ibmcloud target -o $IBM_CLOUD_ORG -s $IBM_CLOUD_SPACE
+    - ibmcloud fn deploy --manifest manifest.yml
+    - ibmcloud fn list
+#     - wget https://github.com/apache/openwhisk-cli/releases/download/latest/OpenWhisk_CLI-latest-linux-386.tgz
+#     - tar -xvf OpenWhisk_CLI-latest-linux-386.tgz
+#     - mv wsk /usr/local/bin/wsk
+#     - wsk --help
   
 # pipeline:
 #   build:
