@@ -1,11 +1,14 @@
 pipeline {
-    agent any 
+    agent {
+        docker { image 'node:14-alpine' }
+    }
     stages {
         stage('Build') { 
             steps {
                 // 
                 echo 'build'
                 echo "${IBM_CLOUD_SPACE}"
+                sh 'node --version'
             }
         }
         stage('Test') { 
