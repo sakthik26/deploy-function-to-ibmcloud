@@ -5,6 +5,7 @@ pipeline {
             steps {
                 // 
                 echo 'build'
+                echo "${IBM_CLOUD_SPACE}"
             }
         }
         stage('Test') { 
