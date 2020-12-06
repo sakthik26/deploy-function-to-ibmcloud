@@ -17,6 +17,7 @@ pipeline {
         stage('Deploy') { 
             steps {
                 // 
+                sh 'whoami'
                 echo 'deploy'
                 sh "curl -fsSL https://clis.cloud.ibm.com/install/linux | /bin/sh"
                 sh "ibmcloud plugin install cloud-functions"
